@@ -2,7 +2,7 @@
 
 个人算法笔记库。
 
-Live: https://dionysus23334.github.io/Algorithms/
+Live (after GitHub Pages is enabled): https://dionysus23334.github.io/Algorithms/
 
 ## Status
 

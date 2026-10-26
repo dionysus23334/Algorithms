@@ -2,7 +2,7 @@
 
 > **Goal**: be able to derive a solution and explain why the algorithm is correct.
 >
-> This chapter table defines the table of contents and the writing order; every chapter ultimately provides dual Python / C++ implementations, running examples and boundary cases.
+> **Status**: all 10 chapters of Level 5 are expanded; each chapter contains Python / C++ implementations, complexity, boundary cases and exercises.
 
 ## Chapters
 

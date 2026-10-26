@@ -2,7 +2,7 @@
 
 > **Goal**: handle more complex states, structures, and combinations of algorithms.
 >
-> This chapter table defines the table of contents and the writing order; each chapter will ultimately provide Python / C++ dual-language implementations, a running example, and boundary cases.
+> **Status**: all 11 chapters of Level 7 are expanded; each chapter contains Python / C++ implementations, complexity analysis, boundary cases and exercises.
 
 ## Chapters
 

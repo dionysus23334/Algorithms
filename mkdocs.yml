@@ -39,6 +39,7 @@ theme:
 nav:
   - ← 个人主页: https://dionysus23334.github.io/study-blogs/
   - 首页: index.md
+  - 术语表: glossary.md
 
 plugins:
   - search:
@@ -82,5 +83,6 @@ extra_css:
 
 extra_javascript:
   - javascripts/table-wrap.js
+  - javascripts/glossary.js
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

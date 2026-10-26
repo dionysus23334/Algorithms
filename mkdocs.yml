@@ -63,8 +63,21 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.arithmatex:
       generic: true
+      inline_syntax: [round]
+      block_syntax: [square]
+  - pymdownx.tabbed:
+      alternate_style: true
+
+exclude_docs: |
+  .DS_Store
+
+validation:
+  links:
+    absolute_links: ignore
+    unrecognized_links: warn
 
 extra_css:
+  - stylesheets/base.css
   - stylesheets/extra.css
 
 extra_javascript:

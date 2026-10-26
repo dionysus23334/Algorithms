@@ -21,7 +21,7 @@
 | 11 | [Disjoint Set Union](11-dsu.md) | Representative element, union, path compression, union by size | Hand-written disjoint set union |
 | 12 | [Graph Storage](12-graph-storage.md) | Directed graph, undirected graph, edge weights, adjacency list, adjacency matrix | Graph construction and basic operations |
 
-## Writing conventions
+## Writing Conventions
 
 - First give the problem and the interface, then the implementation;
 - The Python version prioritizes expressing the algorithm structure;

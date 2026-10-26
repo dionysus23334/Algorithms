@@ -1,27 +1,102 @@
 # 6.8 String Matching
 
 > **Level**: Level 6 · Common Topic Algorithms  
-> **Status**: chapter skeleton; prose, Python/C++ implementations and boundary cases are pending.
+> **Status**: Expanded.
 
-## Chapter Outline
+## Learning Objectives
 
-- Naive matching, prefix function, KMP, Z algorithm
+- Write naive matching;
+- Understand the prefix function and KMP;
+- Use the Z algorithm to find repeated structure.
 
-## Dual-language Implementations
+## Naive Matching
 
-- **Python**: uses built-in containers and object references, prioritizing the expression of the algorithm structure;
-- **C++**: demonstrates value semantics, pointers/references, memory layout and resource management;
-- **Standard library approach**: pattern matching and finding repeated structure
+```python
+def naive_find(text: str, pat: str) -> int:
+    n, m = len(text), len(pat)
+    for i in range(n - m + 1):
+        if text[i:i+m] == pat:
+            return i
+    return -1
+```
 
-## Checklist
+Worst case \(O(nm)\).
 
-- [ ] Problem definition and input/output conventions
-- [ ] Python implementation and running example
-- [ ] C++ implementation and compilation example
-- [ ] Complexity analysis
-- [ ] Boundary cases and counterexamples
-- [ ] Exercises and hints
+## KMP Prefix Function
+
+`pi[i]`: the length of the longest proper prefix of `pat[:i+1]` that is also a suffix of it.
+
+```python
+def prefix_function(p: str) -> list[int]:
+    pi = [0] * len(p)
+    j = 0
+    for i in range(1, len(p)):
+        while j > 0 and p[i] != p[j]:
+            j = pi[j - 1]
+        if p[i] == p[j]:
+            j += 1
+        pi[i] = j
+    return pi
+
+def kmp_find(text: str, pat: str) -> int:
+    if not pat:
+        return 0
+    pi = prefix_function(pat)
+    j = 0
+    for i, ch in enumerate(text):
+        while j > 0 and ch != pat[j]:
+            j = pi[j - 1]
+        if ch == pat[j]:
+            j += 1
+        if j == len(pat):
+            return i - len(pat) + 1
+    return -1
+```
+
+Time \(O(n+m)\).
+
+## Z Algorithm
+
+`z[i]`: the length of the longest common prefix of `s` and `s[i:]`. It can be used to find all matches and periods.
+
+## C++ KMP
+
+```cpp
+#include <string>
+#include <vector>
+
+std::vector<int> prefix_function(const std::string& p) {
+    std::vector<int> pi(p.size(), 0);
+    for (int i = 1, j = 0; i < static_cast<int>(p.size()); ++i) {
+        while (j > 0 && p[i] != p[j]) j = pi[j - 1];
+        if (p[i] == p[j]) ++j;
+        pi[i] = j;
+    }
+    return pi;
+}
+```
+
+## Boundary Cases
+
+| Case | Note |
+|---|---|
+| Empty pattern | usually returns 0 |
+| Pattern longer than the text | returns -1 |
+| Overlapping matches | KMP can continue to find the next one |
+| Unicode | by byte or by code point; the convention must be consistent |
+
+## Exercises
+
+1. Return all match positions.
+2. Use the prefix function to find the minimal period of a string.
+3. Implement matching with the Z algorithm.
+
+## Sources
+
+- [cp-algorithms](https://cp-algorithms.com/)
+- [OI Wiki](https://oi-wiki.org/)
+- [Hello Algo](https://www.hello-algo.com/)
 
 ## Navigation
 
-[← Previous](index.md) · [Level Overview](index.md) · [Next](09-trie-hash.md)
+[← Previous](07-monotonic.md) · [Level Overview](index.md) · [Next](09-trie-hash.md)

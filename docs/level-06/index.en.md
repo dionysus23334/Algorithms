@@ -2,7 +2,7 @@
 
 > **Goal**: systematically master the common algorithms in graphs, strings, ranges and number theory.
 >
-> This chapter table is the table of contents and the writing order; each chapter will ultimately provide dual Python / C++ implementations, a running example and boundary cases.
+> **Status**: all 12 chapters of Level 6 are expanded; each chapter contains Python / C++ implementations, complexity, boundary cases and exercises.
 
 ## Chapters
 

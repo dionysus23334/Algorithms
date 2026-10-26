@@ -82,6 +82,37 @@ def manacher(s: str) -> tuple[list[int], list[int]]:
 
 `sa[i]`：第 \(i\) 小的后缀起始位置；`lcp` 相邻后缀最长公共前缀。倍增 + 基数排序 \(O(n\log n)\)。
 
+## C++ 实现
+
+```cpp
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
+
+int longest_palindrome(const std::string& s) {
+    int n = s.size(), best = 1;
+    std::vector<int> d1(n), d2(n);
+    for (int i = 0, l = 0, r = -1; i < n; ++i) {
+        int k = (i > r) ? 1 : std::min(d1[l + r - i], r - i + 1);
+        while (i - k >= 0 && i + k < n && s[i-k] == s[i+k]) ++k;
+        d1[i] = k; best = std::max(best, 2 * k - 1);
+        if (i + k - 1 > r) { l = i - k + 1; r = i + k - 1; }
+    }
+    for (int i = 0, l = 0, r = -1; i < n; ++i) {
+        int k = (i > r) ? 0 : std::min(d2[l + r - i + 1], r - i + 1);
+        while (i - k - 1 >= 0 && i + k < n && s[i-k-1] == s[i+k]) ++k;
+        d2[i] = k; best = std::max(best, 2 * k);
+        if (i + k - 1 > r) { l = i - k; r = i + k - 1; }
+    }
+    return best;
+}
+
+int main() {
+    std::cout << longest_palindrome("abacdfgdcaba") << '\n';
+}
+```
+
 ## 边界
 
 | 场景 | 注意 |

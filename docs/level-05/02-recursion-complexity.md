@@ -68,6 +68,21 @@ def calls(n: int) -> int:
 
 对 \(n=2^k\)，调用数 \(2n-1\)，符合 \(O(n)\)。
 
+## C++ 实现
+
+```cpp
+#include <iostream>
+
+long long calls(int n) {
+    if (n <= 1) return 1;
+    return 1 + calls(n / 2) + calls(n / 2);
+}
+
+int main() {
+    std::cout << calls(1024) << '\n'; // 2047
+}
+```
+
 ## 边界
 
 | 情况 | 注意 |

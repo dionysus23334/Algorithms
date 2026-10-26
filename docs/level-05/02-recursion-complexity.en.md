@@ -68,6 +68,21 @@ def calls(n: int) -> int:
 
 For \(n=2^k\) the number of calls is \(2n-1\), consistent with \(O(n)\).
 
+## C++ Implementation
+
+```cpp
+#include <iostream>
+
+long long calls(int n) {
+    if (n <= 1) return 1;
+    return 1 + calls(n / 2) + calls(n / 2);
+}
+
+int main() {
+    std::cout << calls(1024) << '\n'; // 2047
+}
+```
+
 ## Boundary Cases
 
 | Case | Note |

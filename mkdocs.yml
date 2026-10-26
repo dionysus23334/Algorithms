@@ -1,0 +1,73 @@
+site_name: 算法
+site_description: 个人算法笔记库：数据结构、算法设计与复杂度分析。
+site_author: dionysus23334
+site_url: https://dionysus23334.github.io/Algorithms/
+repo_url: https://github.com/dionysus23334/Algorithms
+repo_name: dionysus23334/Algorithms
+edit_uri: edit/main/docs/
+copyright: 个人学习整理 · 算法笔记
+
+theme:
+  name: material
+  language: zh
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - ← 个人主页: https://dionysus23334.github.io/study-blogs/
+  - 首页: index.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      linenums_style: inline
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/table-wrap.js
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -28,7 +28,6 @@ theme:
         name: 切换到浅色模式
   features:
     - navigation.tracking
-    - navigation.sections
     - navigation.top
     - navigation.footer
     - search.suggest
@@ -37,9 +36,117 @@ theme:
     - toc.follow
 
 nav:
-  - ← 个人主页: https://dionysus23334.github.io/study-blogs/
   - 首页: index.md
   - 术语表: glossary.md
+  - 第 1 级 · 编程与算法入门:
+      - 总览: level-01/index.md
+      - 1.1 算法与程序: level-01/01-algorithm-program.md
+      - 1.2 变量与类型: level-01/02-variables-types.md
+      - 1.3 条件与循环: level-01/03-conditions-loops.md
+      - 1.4 函数: level-01/04-functions.md
+      - 1.5 数组与字符串入门: level-01/05-arrays-strings.md
+      - 1.6 引用与复制: level-01/06-references-copy.md
+      - 1.7 基础模拟: level-01/07-simulation.md
+      - 1.8 调试与边界: level-01/08-debugging-boundaries.md
+  - 第 2 级 · 算法分析基础:
+      - 总览: level-02/index.md
+      - 2.1 问题定义: level-02/01-problem-definition.md
+      - 2.2 操作次数: level-02/02-operation-count.md
+      - 2.3 时间复杂度: level-02/03-time-complexity.md
+      - 2.4 空间复杂度: level-02/04-space-complexity.md
+      - 2.5 正确性入门: level-02/05-correctness.md
+      - 2.6 测试与验证: level-02/06-testing.md
+      - 2.7 性能测量: level-02/07-performance.md
+  - 第 3 级 · 基础数据结构:
+      - 总览: level-03/index.md
+      - 3.1 存储与节点: level-03/01-storage-nodes.md
+      - 3.2 动态数组: level-03/02-dynamic-array.md
+      - 3.3 链表: level-03/03-linked-list.md
+      - 3.4 栈: level-03/04-stack.md
+      - 3.5 递归与调用栈: level-03/05-recursion-stack.md
+      - 3.6 队列与双端队列: level-03/06-queue-deque.md
+      - 3.7 哈希表与集合: level-03/07-hash-table.md
+      - 3.8 树与二叉树: level-03/08-trees-binary.md
+      - 3.9 二叉搜索树: level-03/09-bst.md
+      - 3.10 堆与优先队列: level-03/10-heap.md
+      - 3.11 并查集: level-03/11-dsu.md
+      - 3.12 图的存储: level-03/12-graph-storage.md
+  - 第 4 级 · 基础算法与常用技巧:
+      - 总览: level-04/index.md
+      - 4.1 枚举与查找: level-04/01-enumeration-search.md
+      - 4.2 基础排序: level-04/02-basic-sorts.md
+      - 4.3 标准库排序: level-04/03-library-sort.md
+      - 4.4 二分查找: level-04/04-binary-search.md
+      - 4.5 前缀和: level-04/05-prefix-sum.md
+      - 4.6 差分: level-04/06-difference.md
+      - 4.7 双指针: level-04/07-two-pointers.md
+      - 4.8 滑动窗口: level-04/08-sliding-window.md
+      - 4.9 位运算: level-04/09-bitwise.md
+      - 4.10 离散化: level-04/10-discretization.md
+  - 第 5 级 · 核心算法设计方法:
+      - 总览: level-05/index.md
+      - 5.1 分治: level-05/01-divide-conquer.md
+      - 5.2 递归复杂度: level-05/02-recursion-complexity.md
+      - 5.3 排序进阶: level-05/03-advanced-sorts.md
+      - 5.4 回溯: level-05/04-backtracking.md
+      - 5.5 剪枝与去重: level-05/05-pruning-dedup.md
+      - 5.6 贪心: level-05/06-greedy.md
+      - 5.7 动态规划入门: level-05/07-dp-intro.md
+      - 5.8 背包问题: level-05/08-knapsack.md
+      - 5.9 序列动态规划: level-05/09-sequence-dp.md
+      - 5.10 综合方法: level-05/10-synthesis.md
+  - 第 6 级 · 常用专题算法:
+      - 总览: level-06/index.md
+      - 6.1 图搜索: level-06/01-graph-search.md
+      - 6.2 图的基本结构: level-06/02-graph-structure.md
+      - 6.3 最短路径: level-06/03-shortest-path.md
+      - 6.4 最小生成树: level-06/04-mst.md
+      - 6.5 树上算法: level-06/05-tree-algorithms.md
+      - 6.6 区间数据结构: level-06/06-range-ds.md
+      - 6.7 单调结构: level-06/07-monotonic.md
+      - 6.8 字符串匹配: level-06/08-string-matching.md
+      - 6.9 字符串组织: level-06/09-trie-hash.md
+      - 6.10 基础数论: level-06/10-number-theory.md
+      - 6.11 组合计算: level-06/11-combinatorics.md
+      - 6.12 XOR 应用: level-06/12-xor.md
+  - 第 7 级 · 进阶算法与数据结构:
+      - 总览: level-07/index.md
+      - 7.1 动态规划进阶: level-07/01-dp-advanced.md
+      - 7.2 动态规划优化: level-07/02-dp-optimization.md
+      - 7.3 搜索进阶: level-07/03-search-advanced.md
+      - 7.4 图的连通结构: level-07/04-connectivity.md
+      - 7.5 网络流与匹配: level-07/05-network-flow.md
+      - 7.6 字符串进阶: level-07/06-string-advanced.md
+      - 7.7 高级树结构: level-07/07-advanced-trees.md
+      - 7.8 离线与分块: level-07/08-offline-block.md
+      - 7.9 数论进阶: level-07/09-nt-advanced.md
+      - 7.10 异或线性基: level-07/10-xor-basis.md
+      - 7.11 计算几何: level-07/11-computational-geometry.md
+  - 第 8 级 · 高级算法与计算方法:
+      - 总览: level-08/index.md
+      - 8.1 随机算法基础: level-08/01-randomized-basics.md
+      - 8.2 随机化算法: level-08/02-randomized-algorithms.md
+      - 8.3 高级 DP 优化: level-08/03-advanced-dp-optimization.md
+      - 8.4 高级图算法: level-08/04-advanced-graph.md
+      - 8.5 高级字符串结构: level-08/05-advanced-string.md
+      - 8.6 动态树: level-08/06-dynamic-trees.md
+      - 8.7 快速变换: level-08/07-fft-ntt.md
+      - 8.8 数值计算基础: level-08/08-numerical-basics.md
+      - 8.9 数值算法: level-08/09-numerical-algorithms.md
+      - 8.10 优化算法: level-08/10-optimization.md
+      - 8.11 大规模数据算法: level-08/11-large-scale.md
+  - 第 9 级 · 算法理论与计算边界:
+      - 总览: level-09/index.md
+      - 9.1 计算模型: level-09/01-computation-models.md
+      - 9.2 可计算性: level-09/02-computability.md
+      - 9.3 问题归约: level-09/03-reductions.md
+      - 9.4 复杂性类别: level-09/04-complexity-classes.md
+      - 9.5 NP 完全问题: level-09/05-np-complete.md
+      - 9.6 算法下界: level-09/06-lower-bounds.md
+      - 9.7 近似算法: level-09/07-approximation.md
+      - 9.8 在线算法: level-09/08-online.md
+      - 9.9 参数化算法: level-09/09-parameterized.md
+      - 9.10 随机计算理论: level-09/10-randomized-theory.md
 
 plugins:
   - search:

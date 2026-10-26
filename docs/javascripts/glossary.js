@@ -40,6 +40,7 @@ const GLOSSARY = {
     var root = document.querySelector(".md-typeset");
     if (!root || root.dataset.glossaryDone || !root.querySelector("h1, p")) return;
     root.dataset.glossaryDone = "1";
+    var lang = (document.documentElement.lang || "zh").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
 
     var skip = {
       CODE: 1, PRE: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1,
@@ -79,7 +80,11 @@ const GLOSSARY = {
         if (/^\s*[（(]/.test(after)) continue;
         if (/[（(]\s*$/.test(before)) continue;
         var info = GLOSSARY[term];
-        out += text.slice(last, start) + term + "（" + info[0] + "，" + info[1] + "）";
+        if (lang === "en") {
+          out += text.slice(last, start) + term + " (" + info[0] + ")";
+        } else {
+          out += text.slice(last, start) + term + "（" + info[0] + "，" + info[1] + "）";
+        }
         last = end;
         done[term] = true;
       }

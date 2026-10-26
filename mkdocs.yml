@@ -39,6 +39,7 @@ nav:
   - ← 个人主页: https://dionysus23334.github.io/study-blogs/
   - 首页: index.md
   - 术语表: glossary.md
+  - 参考来源: sources.md
   - 第 1 级 · 编程与算法入门:
       - 总览: level-01/index.md
       - 1.1 算法与程序: level-01/01-algorithm-program.md
@@ -176,6 +177,7 @@ plugins:
           nav_translations:
             '首页': 'Home'
             '术语表': 'Glossary'
+            '参考来源': 'Sources and Licenses'
             '← 个人主页': '← Study archive'
             '总览': 'Overview'
             '第 1 级 · 编程与算法入门': 'Level 1 · Programming and Algorithms: Getting Started'
